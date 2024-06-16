@@ -1,11 +1,20 @@
 {
   "scripts": {
-    "start": "vite --host",
-    "build": "vite build"
+    "build": "yarn global add esbuild && esbuild --bundle plugin.ts > plugin.js --platform=node",
+    "publish": "npm publish --access public"
   },
-  "devDependencies": {
-    "vite": "5.2.12",
-    "vite-tsconfig-paths": "4.3.2",
-    "@rollup/plugin-alias": "5.1.0"
+  "name": "@tulib/vite-tulip-plugin",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "plugin.js",
+  "module": "plugin.js",
+  "types": "plugin.ts",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "1.0.1"
+  },
+  "peerDependencies": {
+    "vite": "*"
   }
 }
