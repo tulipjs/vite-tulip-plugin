@@ -33,6 +33,8 @@ export const plugin = (): Plugin => {
 			
 			const currentDirName = ctx.server.config.envDir.replaceAll('\\', '/') + '/'
 			const componentObject = getComponentObject(currentDirName, ctx.file, await ctx.read())
+			if(!componentObject || !componentObject?.funcName) return;
+			
 			$server.config.logger.info(colors.yellow(`component hot-reload `) + colors.dim(componentObject.funcName), {
 				clear: true,
 				timestamp: true,
