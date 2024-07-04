@@ -8,11 +8,10 @@ type ComponentData = {
 }
 
 const getComponentObject = (currentDirName, file, content) => {
-	
 	const url = file.replace(currentDirName, '')
 	const parts = url.split('/');
 	
-	const match = /export const (.*Component) /.exec(content)
+	const match = /export const (.*Component)[: ]/.exec(content)
 	
 	return match ? {
 		url,
