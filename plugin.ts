@@ -14,11 +14,11 @@ const getComponentObject = (currentDirName, file, content) => {
 	
 	const match = /export const (.*Component) /.exec(content)
 	
-	return {
+	return match ? {
 		url,
 		basePath: parts.slice(0, -1),
 		funcName: match[1],
-	};
+	} : undefined;
 }
 
 export const plugin = (): Plugin => {
