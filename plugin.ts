@@ -12,7 +12,7 @@ const getComponentObject = (currentDirName, file, content) => {
 	const url = file.replace(currentDirName, '')
 	const parts = url.split('/');
 	
-	const match = /export const (.*): /.exec(content)
+	const match = /export const (.*Component) /.exec(content)
 	
 	return {
 		url,
