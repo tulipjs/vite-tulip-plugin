@@ -37,6 +37,9 @@ jobs:
 
       - run: yarn build
 
+      - name: Publish package
+        run: npx jsr publish --allow-dirty
+
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
