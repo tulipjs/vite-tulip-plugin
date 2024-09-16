@@ -1,4 +1,4 @@
-import {Plugin, HmrContext} from "vite";
+import {PluginOption, HmrContext} from "vite";
 import colors from 'picocolors'
 
 type ComponentData = {
@@ -20,7 +20,7 @@ const getComponentObject = (currentDirName, file, content) => {
 	} : undefined;
 }
 
-export const plugin = (): Plugin => {
+export const plugin = (): PluginOption => {
 	let $server;
 	let $isPluginLoaded = false
 	
