@@ -1,5 +1,6 @@
 {
   "name": "@tu/vite-tulip-plugin",
   "version": "0.0.0",
-  "exports": "./plugin.ts"
+  "exports": "./plugin.ts",
+  "license": "MIT"
 }
