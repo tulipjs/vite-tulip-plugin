@@ -50,7 +50,7 @@ export const plugin = (): Plugin => {
 		},
 	}
 };
-export const initViteTulipPlugin = (hot: any, onSwapComponent: (componentModule: any, componentData: ComponentData) => void) => {
+export const initViteTulipPlugin = (hot: any, onSwapComponent: (componentModule: any, componentData: ComponentData) => void): void => {
 	if (hot) {
 		hot.send('dev:start');
 		hot.on('dev:component', async (componentData) => {
